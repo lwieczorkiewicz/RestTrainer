@@ -20,15 +20,15 @@ import java.util.UUID;
 
 @Data
 @RestController
-@RequestMapping("/trainers")
+@RequestMapping("/restTrainers")
 public class TrainerController {
 
     private final TrainerService trainerService;
 
-   /* @PostMapping
-    public TrainerDto saveTrainer(){
-        return trainerService.saveTrainer(trainerDto);
-    }*/
+//    @PostMapping
+//    public TrainerDto saveTrainer(){
+//        return trainerService.saveTrainer(trainerDto);
+//    }
 
     @GetMapping("/{id}")
     public TrainerDto findById(@PathVariable UUID id) throws TrainerNotFoundException{
@@ -37,7 +37,7 @@ public class TrainerController {
     }
 
     @PutMapping("/{id}")
-    public TrainerDto edit(@PathVariable UUID id, @RequestBody TrainerDto trainerDto) throws TrainerNotFoundException {
+    public TrainerDto editTrainer(@PathVariable UUID id, @RequestBody TrainerDto trainerDto) throws TrainerNotFoundException {
         return trainerService.editTrainer(id, trainerDto);
     }
 

@@ -1,10 +1,12 @@
 package com.example.app.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @Data
@@ -12,6 +14,7 @@ import java.util.UUID;
 @AllArgsConstructor
 public class TrainerDto {
 
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private UUID id;
 
     private String firstName;
@@ -23,6 +26,7 @@ public class TrainerDto {
     private int phoneNumber;
 
     public TrainerDto(UUID id, String firstName, String lastName, String email, int phoneNumber, String ddd, ArrayList arrayList) {
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -68,4 +72,5 @@ public class TrainerDto {
     public void setPhoneNumber(int phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+
 }
