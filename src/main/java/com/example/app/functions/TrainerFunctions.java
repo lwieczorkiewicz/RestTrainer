@@ -14,7 +14,6 @@ public class TrainerFunctions {
             trainer.getLastName(),
             trainer.getEmail(),
             trainer.getPhoneNumber(),
-            "ddd",
             new ArrayList()
     );
 

@@ -25,7 +25,7 @@ public class TrainerDto {
 
     private int phoneNumber;
 
-    public TrainerDto(UUID id, String firstName, String lastName, String email, int phoneNumber, String ddd, ArrayList arrayList) {
+    public TrainerDto(UUID id, String firstName, String lastName, String email, int phoneNumber, ArrayList arrayList) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;

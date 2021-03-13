@@ -25,10 +25,12 @@ public class TrainerController {
 
     private final TrainerService trainerService;
 
-//    @PostMapping
-//    public TrainerDto saveTrainer(){
-//        return trainerService.saveTrainer(trainerDto);
-//    }
+    @PostMapping
+    public TrainerDto saveTrainer(){
+        TrainerDto trainer = new TrainerDto();
+        
+        return trainerService.saveTrainer(trainer);
+    }
 
     @GetMapping("/{id}")
     public TrainerDto findById(@PathVariable UUID id) throws TrainerNotFoundException{

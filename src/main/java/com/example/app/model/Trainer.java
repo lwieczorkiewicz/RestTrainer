@@ -24,13 +24,13 @@ public class Trainer {
     @Type(type = "org.hibernate.type.UUIDCharType")
     private UUID id;
 
-    @Column(name = "name", nullable = false)
+    @Column(name = "name")
     private String firstName;
 
-    @Column(name = "last_name", nullable = false)
+    @Column(name = "last_name")
     private String lastName;
 
-    @Column(name = "email", nullable = false)
+    @Column(name = "email")
     private String email;
 
     private Integer phoneNumber;
